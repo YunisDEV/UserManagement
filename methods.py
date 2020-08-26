@@ -33,6 +33,8 @@ def getUserWithLongestName():
         if not user or len(user.name) < len(u.name):
             user = u
 
+    user.showData()
+
 
 def getUserWithPassLongerThan(length):
     for u in db:
