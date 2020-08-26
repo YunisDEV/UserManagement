@@ -1,6 +1,7 @@
 from database import db
 from lib import User
 
+
 def getData():
     user_inputs = ['Name', 'Surname', 'Username', 'Password']
     return [input(uin+": ") for uin in user_inputs]
@@ -39,13 +40,18 @@ def getUserWithPassLongerThan(length):
             u.showData()
 
 
-def start():
+def printHelp():
     print('Type 1 to add users')
     print('Type 2 to show users')
     print('Type 3 to show user by name')
     print('Type 4 to show users that have password longer than 8')
     print('Type 5 to show user with longest name')
-    print('Type 6 to exit')
+    print('Type 6 to print help')
+    print('Type 7 to exit')
+
+
+def start():
+    printHelp()
     while True:
         cmd = input('enter command>> ')
         if cmd == "1":
@@ -63,6 +69,10 @@ def start():
         elif cmd == "5":
             getUserWithLongestName()
         elif cmd == "6":
+            printHelp()
+        elif cmd == "7":
             break
         else:
             pass
+if __name__ == "__main__":
+    print('METHODS module')

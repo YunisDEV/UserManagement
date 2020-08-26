@@ -7,3 +7,6 @@ class User:
 
     def showData(self):
         print(f"{self.name} | {self.surname} | {self.username} | {self.password}")
+
+if __name__ == "__main__":
+    print('LIB module')
