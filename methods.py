@@ -29,11 +29,17 @@ def showUserByName(name):
 
 def getUserWithLongestName():
     user = None
+    same = []
     for u in db:
         if not user or len(user.name) < len(u.name):
             user = u
+            same = []
+        elif len(user.name) == len(u.name):
+            same.append(u)
 
     user.showData()
+    for i in same:
+        i.showData()
 
 
 def getUserWithPassLongerThan(length):
