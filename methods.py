@@ -1,7 +1,6 @@
 from database import db
 from lib import User
 
-
 def getData():
     user_inputs = ['Name', 'Surname', 'Username', 'Password']
     return [input(uin+": ") for uin in user_inputs]
